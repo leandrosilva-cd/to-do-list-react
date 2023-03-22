@@ -1,0 +1,41 @@
+*{
+    font-size: 0.875rem;
+}
+
+.wrapper {
+    max-width: 100%;
+    width: 46rem;
+}
+
+.title {
+    max-width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newTodoInfo, .completedTodoInfo {
+    display: flex;
+}
+
+.title p {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+span {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    border-radius: 999px;
+    padding: 0 0.5rem;
+}
+
+.newTodoInfo {
+    color: var(--blue);
+}
+
+.completedTodoInfo {
+    color: var(--purple);
+}
