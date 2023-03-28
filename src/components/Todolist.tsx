@@ -1,7 +1,19 @@
 import { Todo } from './Todo';
-import styles from './Todolist.module.css'
+import styles from './Todolist.module.css';
+import { Task } from '../classes/Task';
 
-export function Todolist(){
+interface TaskProps {
+    tasks: Task[];
+}
+
+export function Todolist({tasks}: TaskProps){
+
+    function deleteTask(contentToDelete:string) {
+        // const newTasks = tasks.filter( task => {
+        //     return tasks != contentToDelete
+        // })
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.title}>
@@ -11,13 +23,13 @@ export function Todolist(){
                 </div>
 
                 <div className={styles.completedTodoInfo}>
-                    <p>Concluías</p> 
+                    <p>Concluídas</p> 
                     <span>2 de 5</span>
                 </div>
             </div>
-
-            <Todo />
-
+            {
+                tasks.map((task)=><Todo key={task.id} task={task} onDeleteTask={deleteTask} />)
+            }
         </div>
     );
 }
