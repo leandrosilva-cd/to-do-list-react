@@ -3,7 +3,7 @@ Projeto desafio do módulo Ignite ReactJS da Rockeatseat.
 Desafio: Produzir uma aplicação de lista de afazeres utilizando HTML, CSS, JavaScript com o framework React.
 Layout fornecido pela Rocketseat.
 
-The project aims the practice of the basics of ReactJS. A resposive To do list was done in ReactJS
+The project aims the practice of the basics of ReactJS. A resposive To do list web application was done in ReactJS
 
 ### Desktop
 Image 1 - No task situation.
