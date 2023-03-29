@@ -5,24 +5,25 @@ import { Task } from '../classes/Task';
 interface TodoProps {
     task: Task;
     onDeleteTask:Function;
+    onCompletedTask:Function;
 }
 
-export function Todo({onDeleteTask, task} : TodoProps) {
+export function Todo({onDeleteTask, onCompletedTask, task} : TodoProps) {
 
     function handleDeleteTask() {
-        onDeleteTask()
+        onDeleteTask(task.id);
     }
 
     function handleChecked() {
-
+        onCompletedTask(task.id);
     }
 
     return (
         <div>
             <div className={task.checked ? styles.checkedbox : styles.Uncheckedbox}>
                 <div className={styles.info}>
-                    <button onClick={handleChecked} className={styles.checkBtn}><Circle size={16}/></button>
-                    <p>Criar to do app</p>
+                    <button onClick={handleChecked} className={styles.checkBtn}>{task.checked ? <CheckCircle size={16} color='var(--purple-dark)' weight='fill' /> : <Circle size={16}/>}</button>
+                    <p>{task.content}</p>
                 </div>
                 <button onClick={handleDeleteTask} className={styles.deleteBtn}><Trash size={16} /></button>
             </div>

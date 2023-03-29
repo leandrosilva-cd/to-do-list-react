@@ -31,8 +31,6 @@ function App() {
     setNewTextContent(event.target.value);
   }
 
-  useEffect(()=>console.log(tasks), [tasks]);
-
   return (
     <div>
       <Header />
@@ -41,7 +39,7 @@ function App() {
           <textarea className={styles.newTaskName} name='task' value={newTextContent} onChange={handleNewContentChange} placeholder='Adicione uma nova tarefa' required />
           <button className={styles.submitTask} type="submit">Criar<PlusCircle size={16} /></button>
         </form>
-        <Todolist tasks={tasks} />
+        <Todolist setTasks={setTasks} tasks={tasks} />
       </div>
     </div>
   )

@@ -21,11 +21,14 @@
     border: solid 1px var(--gray-700);
     border-radius: 8px;
     background: var(--gray-500);
+    color: var(--gray-300);
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 .newTaskName::placeholder {
     color: var(--gray-300);
     font-family: 'Inter', sans-serif;
-    padding: 1rem;
     margin: 0 auto;
 }
 

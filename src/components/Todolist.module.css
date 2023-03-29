@@ -39,3 +39,19 @@ span {
 .completedTodoInfo {
     color: var(--purple);
 }
+
+.tasklessText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3.375rem;
+}
+
+.tasklessText p {
+    margin-bottom: 0.5rem;
+}
+
+.clip {
+    padding-bottom: 1rem;
+}
